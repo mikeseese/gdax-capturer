@@ -2,6 +2,8 @@
 
 const orderBook = "BTC-USD";
 const numPricesPerType = 300;
+const intervalPeriodMs = 100;
+const destinationFolder = "/store/gdax/orderbooks/"
 
 Date.prototype.yyyymmddhh = function() {
     var mm = this.getMonth() + 1; // getMonth() is zero-based
@@ -33,7 +35,7 @@ setInterval(() => {
     if(aggState.bidPrices.length > 0) {
         const currentDate = new Date();
         const timeMillis = currentDate.getTime();
-        const fileName = currentDate.yyyymmddhh() + "-" + orderBook + "-ORDER-BOOK.h5";
+        const fileName = destinationFolder + currentDate.yyyymmddhh() + "-" + orderBook + "-ORDER-BOOK.h5";
         let resetData = fileName !== lastFileName;
         lastFileName = fileName;
 
@@ -66,4 +68,4 @@ setInterval(() => {
     }
     const timeStop = Date.now();
     console.log(timeStop - timeStart + " ms");
-}, 100)
+}, intervalPeriodMs);
