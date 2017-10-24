@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gdax": "github:coinbase/gdax-node"
+    "hdf5": "^0.3.3"
   }
 }
