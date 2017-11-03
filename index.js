@@ -21,7 +21,7 @@ Date.prototype.yyyymmddhh = function() {
             (mm>9 ? '' : '0') + mm,
             (dd>9 ? '' : '0') + dd,
             (hh>9 ? '' : '0') + hh,
-            (MM>9 ? '' : '0') + hh
+            (MM>9 ? '' : '0') + MM
             ].join('-');
 };
 
