@@ -10,12 +10,12 @@ Date.prototype.yyyymmddhh = function() {
     var dd = this.getDate();
     var hh = this.getHours();
     var MM = this.getMinutes();
-    /*if(MM >= 30) {
+    if(MM >= 30) {
         MM = 30;
     }
     else {
         MM = 0;
-    }*/
+    }
 
     return [this.getFullYear(),
             (mm>9 ? '' : '0') + mm,
